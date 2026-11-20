@@ -11,8 +11,11 @@ final class PublicController extends AbstractController
     #[Route('/', name: 'homepage')]
     public function index(): Response
     {
+        $nom = "Bryan";
         return $this->render('public/index.html.twig', [
             'controller_name' => 'PublicController',
+            'nom' => $nom,
+            
         ]);
     }
 }
